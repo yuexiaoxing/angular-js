@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<head>
+	<title>哔哩哔哩</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="fonts/glyphicons-halflings-regular.ttf">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+  <script type="text/javascript">
+         $(function() {
+            var Opts = {
+                source :[ "夏目友人帐", "妖精的尾巴", "火影忍者", "火影忍者之博人转", "名侦探柯南", "", "数码宝贝大冒险", "海贼王", "网球王子"]
+            };
+
+            $("#suggest").autocomplete(Opts);
+        });   
+        $(function() {
+    $( "#slider" ).slider();
+  });    
+    </script>
+
+    <style>
+  .toggler { width: 500px; height: 200px; }
+  #button { padding: .5em 1em; text-decoration: none; }
+  #effect { width: 240px; height: 135px; padding: 0.4em; position: relative; }
+  #effect h3 { margin: 0; padding: 0.4em; text-align: center; }
+  </style>
+  <script>
+  $(function() {
+    // 运行当前选中的特效
+    function runEffect() {
+      // 从中获取特效类型
+      var selectedEffect = $( "#effectTypes" ).val();
+ 
+      // 大多数的特效类型默认不需要传递选项
+      var options = {};
+      // 一些特效带有必需的参数
+      if ( selectedEffect === "scale" ) {
+        options = { percent: 0 };
+      } else if ( selectedEffect === "size" ) {
+        options = { to: { width: 200, height: 60 } };
+      }
+ 
+      // 运行特效
+      $( "#effect" ).hide( selectedEffect, options, 1000, callback );
+    };
+ 
+    // 回调函数
+    function callback() {
+      setTimeout(function() {
+        $( "#effect" ).removeAttr( "style" ).hide().fadeIn();
+      }, 1000 );
+    };
+ 
+    // 根据选择菜单值设置特效
+    $( "#button" ).click(function() {
+      runEffect();
+      return false;
+    });
+  });
+  </script>
+
+</head>
+<body>
+
+<div class="container">
+  <div class="row clearfix">
+    <div class="col-md-3 column">
+      <img src="image/logo.jpg" alt="picture1" width="200px" height="100px" />
+    </div>
+    <div class="col-md-5 column">
+    </div>
+    <div class="col-md-4 column">
+      
+    </div>
+  </div>
+  <div class="row clearfix">
+    <div class="col-md-12 column">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> 
+
+           <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span>
+            <li class="dropdown">
+           <a href="brief introduction.html">
+           <span class="icon-bar"></span></button> <a class="navbar-brand" href="index.html">哔哩哔哩</a></a>
+          
+          </li>
+        </div>
+          
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">番剧<strong class="caret"></strong></a>
+              <ul class="dropdown-menu">
+                <li>
+                   <a href="show.html">连载漫画</a>
+                </li>
+                <li>
+                   <a href="#">完结漫画</a>
+                </li>
+                <li>
+                   <a href="#">咨询</a>
+                </li>
+                <li>
+                   <a href="#">官方</a>
+                </li>
+                <li class="divider">
+                </li>               
+              </ul>
+            </li>
+
+            <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">国产<strong class="caret"></strong></a>
+              <ul class="dropdown-menu">
+                <li>
+                   <a href="#">国产漫画</a>
+                </li>
+                <li>
+                   <a href="#">国产原创相关</a>
+                </li>
+                <li>
+                   <a href="#">咨询</a>
+                </li>
+                <li>
+                   <a href="#">新番表</a>
+                </li>
+                <li class="divider">
+                </li>               
+              </ul>
+            </li>
+
+            <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">音乐<strong class="caret"></strong></a>
+              <ul class="dropdown-menu">
+                <li>
+                   <a href="#">原创音乐</a>
+                </li>
+                <li>
+                   <a href="#">翻唱</a>
+                </li>
+                <li>
+                   <a href="#">演奏</a>
+                </li>
+                <li class="divider">
+                </li>
+                <li>
+                   <a href="#">Separated link</a>
+                </li>
+                <li class="divider">
+                </li>
+                <li>
+                  
+                </li>
+              </ul>
+            </li>
+                        
+                        <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">舞蹈<strong class="caret"></strong></a>
+              <ul class="dropdown-menu">
+                <li>
+                   <a href="#">宅舞</a>
+                </li>
+                <li>
+                   <a href="#">三次元舞蹈</a>
+                </li>
+                
+                <li class="divider">
+                </li>               
+              </ul>
+            </li>
+                        
+                        <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">游戏<strong class="caret"></strong></a>
+              <ul class="dropdown-menu">
+                <li>
+                   <a href="#">单机游戏</a>
+                </li>
+                <li>
+                   <a href="#">网游电竞</a>
+                </li>
+                <li>
+                   <a href="#">音游</a>
+                </li>
+                <li>
+                   <a href="#">GMV</a>
+                </li>
+                <li class="divider">
+                </li>               
+              </ul>
+            </li>
+
+                        <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">科技<strong class="caret"></strong></a>
+              <ul class="dropdown-menu">
+                <li>
+                   <a href="#">纪录片</a>
+                </li>
+                <li>
+                   <a href="#">演讲公开课</a>
+                </li>
+                <li>
+                   <a href="#">野生技术协会</a>
+                </li>
+                <li>
+                   <a href="#">数码</a>
+                </li>
+                <li>
+                   <a href="#">机械</a>
+                </li>
+                <li class="divider">
+                </li>               
+              </ul>
+            </li>
+
+          </ul>
+           <ul class="nav navbar-nav navbar-right">
+          <form class="navbar-form navbar-left" role="search">
+                        <input type="text" id="suggest"class="form-control" placeholder="输入关键词搜索">
+                            <button type="submit" class="btn btn-default">搜索</button>
+                    </form>         
+              </ul>
+            </li>
+          </ul>
+        </div>
+        
+      </nav>
+    </div>
+  </div>
+   <div id="slider"></div>
+  <div class="container wrap-main"></div>
+  <div align="center">
+    <a><img src="image/30.jpg" alt="picture1" width="980px" height="500px" ></a>
+  </div>
+</div>
+    <div class="col-md-3">
+      <ol class="breadcrumb">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <li><a href="#">首页</a></li>
+        <li><a href="list.html#">动画世界</a></li>
+      </ol>
+    </div>
+    <div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="row">
+    <div class="col-md-2 sidebar">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h2 class="panel-title">4月新番</h3>
+            </div>
+
+              <div class="panel-heading">
+                  <h2 class="panel-title">口碑系列</h3>
+              </div>
+
+            <div class="panel-heading">
+              <h2 class="panel-title">剧场版</h3>
+            </div>
+            <div class="panel-heading">
+              <h2 class="panel-title">tv动画</h3>
+            </div>            
+            <div class="panel-heading">
+              <h2 class="panel-title">日本动画</h3>
+            </div>
+            <div class="panel-heading">
+              <h2 class="panel-title">博人转</h3>
+            </div>
+              <div class="panel-heading">
+              <h2 class="panel-title">火影忍者</h3>
+            </div>
+              <ul class="nav nav-pills nav-stacked" role="tablist">
+              <div class="panel-heading">
+               <h2 class="panel-title">四月是你的谎言</h3>
+              </div>
+              <div class="panel-heading">
+              <h2 class="panel-title">物语系列</h3>
+            </div>
+              <div class="panel-heading">
+              <h2 class="panel-title">日常</h3>
+            </div>
+              <div class="panel-heading">
+               <h2 class="panel-title">OVERLOAD</h3>
+              </div>                      
+            <div class="panel-heading">
+              <h2 class="panel-title">Fate stay night</h3>
+            </div>                     
+              <div class="panel-heading">
+              <h2 class="panel-title">海贼王</h3>
+            </div>            
+              <div class="panel-heading">
+                  <h2 class="panel-title">名侦探柯南</h3>
+              </div>
+              <div class="panel-heading">
+                  <h2 class="panel-title">英雄学院</h3>
+              </div>
+              <div class="panel-heading">
+                  <h2 class="panel-title">进击的巨人</h3>
+              </div>
+              <div class="panel-heading">
+                  <h2 class="panel-title">妖精的尾巴</h3>
+              </div>
+              <div class="panel-heading">
+                  <h2 class="panel-title">死神</h3>
+              </div>
+              <div class="panel-heading">
+                  <h2 class="panel-title">怪盗天使</h3>
+              </div>
+        </div>
+    </div>
+    <div class="col-md-10">
+      <span class="glyphicon "></span>&nbsp;<span style="font-size:20px;">四月新番>最新番剧</span><hr>
+
+    <div class="col-md-3"><a href="#">
+        <div class="thumbnail">
+          <img src="image/15.jpg" alt="picture1" width="200px" height="150px">
+        </div></a>
+            <p><a href="#">自由之翼</a></p>           
+    </div>
+
+    <div class="col-md-3"><a href="#">
+        <div class="thumbnail">
+          <img src="image/16.jpg" alt="picture1" width="200px" height="150px">
+        </div></a>         
+            <p><a href="#">阿童木起源</a></p>
+    </div>
+
+    <div class="col-md-3"><a href="#">
+        <div class="thumbnail">
+          <img src="image/17.jpg" alt="picture1" width="200px" height="150px">
+        </div></a>
+            <p><a href="#">忍者少女千鸟</a></p>
+    </div>
+
+    <div class="col-md-3"><a href="#">
+        <div class="thumbnail">
+          <img src="image/18.jpg" alt="picture1" width="200px" height="150px">
+        </div></a>
+            <p><a href="#">时钟机关之星</a></p>
+    </div>
+
+    <div class="col-md-3"><a href="#">
+        <div class="thumbnail">
+          <img src="image/19.jpg" alt="picture1" width="200px" height="150px">
+        </div></a>
+            <p><a href="#">从零开始的魔法书</a></p>
+    </div>
+
+    <div class="col-md-3"><a href="#">
+        <div class="thumbnail">
+          <img src="image/20.jpg" alt="picture1" width="200px" height="150px">
+        </div></a>
+            <p></p>
+            <p><a href="#">网球王子</a></p>
+    </div>
+
+    <div class="col-md-3"><a href="#">
+        <div class="thumbnail">
+          <img src="image/21.jpg" alt="picture1" width="200px" height="150px">
+        </div></a>
+            <p><a href="#">怪物守护神</a></p>
+    </div>
+
+    <div class="col-md-3"><a href="#">
+        <div class="thumbnail">
+          <img src="image/22.jpg" alt="picture1" width="200px" height="150px">
+        </div></a>
+            <p><a href="#">笑面推销员</a></p>
+    </div>
+
+    <div class="col-md-3"><a href="#">
+        <div class="thumbnail">
+          <img src="image/23.jpg" alt="picture1" width="200px" height="150px">
+        </div></a>
+            <p><a href="#">小魔女学院</a></p>
+    </div>
+
+    <div class="col-md-3"><a href="#">
+        <div class="thumbnail">
+          <img src="image/24.jpg" alt="picture1" width="200px" height="150px">
+        </div></a>
+            <p><a href="#">机甲少女</a></p>
+    </div>
+
+    <div class="col-md-3"><a href="#">
+        <div class="thumbnail">
+          <img src="image/25.jpg" alt="picture1" width="200px" height="150px">
+        </div></a>
+            <p><a href="#">偶像大师</a></p>
+    </div>
+
+    <div class="col-md-3"><a href="#">
+        <div class="thumbnail">
+          <img src="image/26.jpg" alt="picture1" width="200px" height="150px">
+        </div></a>
+            <p><a href="#">博人转</a></p>
+    </div>
+
+    <div class="col-md-3"><a href="#">
+        <div class="thumbnail">
+          <img src="image/27.jpg" alt="picture1" width="200px" height="150px">
+        </div></a>
+            <p><a href="#">夏目友人帐</a></p>
+    </div>
+
+    <div class="col-md-3"><a href="#">
+        <div class="thumbnail">
+          <img src="image/28.jpg" alt="picture1" width="200px" height="150px">
+        </div></a>
+            <p><a href="#">王牌御史</a></p>
+    </div>
+
+    <div class="col-md-3"><a href="#">
+        <div class="toggler">
+          <div id="effect" class="ui-widget-content ui-corner-all">
+          <img src="image/29.jpg" alt="picture1" width="300px" height="150px">
+        </div>
+    </div>
+ 
+<select name="effects" id="effectTypes">
+  <option value="blind">百叶窗特效（Blind Effect）</option>
+  <option value="bounce">反弹特效（Bounce Effect）</option>
+  <option value="clip">剪辑特效（Clip Effect）</option>
+  <option value="drop">降落特效（Drop Effect）</option>
+  <option value="explode">爆炸特效（Explode Effect）</option>
+  <option value="fold">折叠特效（Fold Effect）</option>
+  <option value="highlight">突出特效（Highlight Effect）</option>
+  <option value="puff">膨胀特效（Puff Effect）</option>
+  <option value="pulsate">跳动特效（Pulsate Effect）</option>
+  <option value="scale">缩放特效（Scale Effect）</option>
+  <option value="shake">震动特效（Shake Effect）</option>
+  <option value="size">尺寸特效（Size Effect）</option>
+  <option value="slide">滑动特效（Slide Effect）</option>
+</select>
+<br><br>
+<a href="#" id="button" class="ui-state-default ui-corner-all">运行特效</a>
+ 
+    </div> 
+
+
+
+
+</body>
+</html>
